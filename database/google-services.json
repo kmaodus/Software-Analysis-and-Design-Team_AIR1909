@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "6028725646",
+    "firebase_url": "https://discountlocator-f387e.firebaseio.com",
+    "project_id": "discountlocator-f387e",
+    "storage_bucket": "discountlocator-f387e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6028725646:android:a8f4c97df2956cc1b168df",
+        "android_client_info": {
+          "package_name": "com.air.fumic.maodus.persic.poljak.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6028725646-cdsf2itu1ilt3uuj7pulh3mlv0mao7hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoaCibAvaWXJ16tQnGAvtr9hAMAuWIH2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6028725646-cdsf2itu1ilt3uuj7pulh3mlv0mao7hu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6028725646:android:07fe86f42ec18bd7b168df",
+        "android_client_info": {
+          "package_name": "com.air.fumic.maodus.persic.poljak.discountlocator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6028725646-cdsf2itu1ilt3uuj7pulh3mlv0mao7hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoaCibAvaWXJ16tQnGAvtr9hAMAuWIH2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6028725646-cdsf2itu1ilt3uuj7pulh3mlv0mao7hu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
