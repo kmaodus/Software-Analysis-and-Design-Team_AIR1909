@@ -12,6 +12,10 @@ class MyDb : DAO{
     //connection to database
     val database = FirebaseDatabase.getInstance().reference
 
+    public fun getInstance() : MyDb {
+        return this
+    }
+
     //INSERT functions
     override fun insertUser(user: User){
         database.child("users").child(user.id_user.toString()).setValue(user)
