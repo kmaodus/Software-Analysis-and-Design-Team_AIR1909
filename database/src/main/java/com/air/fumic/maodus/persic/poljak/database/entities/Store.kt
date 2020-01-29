@@ -1,14 +1,17 @@
 package com.air.fumic.maodus.persic.poljak.database.entities
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "store")
 data class Store (
-    var id_store: Int,
-    var name: String,
-    var adress: String,
-    var email: String,
-    var phone_number: String,
-    var latitude: String,
-    var longitude: String,
-    var working_hours_from: String,
-    var working_hours_to: String,
-    var description: String
+    @PrimaryKey var id: Int,
+    @ColumnInfo(name = "name") var name: String,
+    @ColumnInfo(name = "description") var description: String,
+    @ColumnInfo(name = "url") var url: String,
+    @ColumnInfo(name = "latitude") var latitude: String,
+    @ColumnInfo(name = "longitude") var longitude: String,
+    @ColumnInfo(name = "working_hours_from") var working_hours_from: String,
+    @ColumnInfo(name = "working_hours_to") var working_hours_to: String
 )

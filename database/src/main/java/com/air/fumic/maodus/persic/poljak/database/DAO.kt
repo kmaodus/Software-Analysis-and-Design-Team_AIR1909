@@ -1,45 +1,32 @@
 package com.air.fumic.maodus.persic.poljak.database
 
+import androidx.room.*
 import com.air.fumic.maodus.persic.poljak.database.entities.*
 
+@Dao
 interface DAO {
 
-    //INSERT functions
-    fun insertUser(user: User)
+    @Query("SELECT * FROM store")
+    fun getStores(): List<Store>
 
-    fun insertStore(store: Store)
+    @Query("SELECT * FROM discount")
+    fun getDiscounts(): List<Discount>
 
-    fun insertProduct(product: Product)
+    @Insert
+    fun insertStore(vararg new_store: Store)
 
-    fun insertOffer(offer: Offer)
+    @Insert
+    fun insertDiscount(vararg new_discount: Discount)
 
-    fun insertDiscount(discount: Discount)
+    @Delete
+    fun deleteStore(store: Store)
 
-    fun insertChart(chart: Chart)
+    @Delete
+    fun deleteDiscount(discount: Discount)
 
-    //SELECT functions
-    fun selectUsers(): MutableList<User>
+    @Update
+    fun updateStore(vararg store: Store)
 
-    fun selectStore(): MutableList<Store>
-
-    fun selectProduct(): MutableList<Product>
-
-    fun selectOffer(): MutableList<Offer>
-
-    fun selectDiscount(): MutableList<Discount>
-
-    fun selectChart(): MutableList<Chart>
-
-    //DELETE functions
-    fun deleteUser(user_id: Int)
-
-    fun deleteStore(store_id: Int)
-
-    fun deleteProduct(product_id: Int)
-
-    fun deleteOffer(offer_id: Int)
-
-    fun deleteDiscount(discount_id: Int)
-
-    fun deleteChart(chart_id: Int)
+    @Update
+    fun updateDiscount(vararg discount: Discount)
 }

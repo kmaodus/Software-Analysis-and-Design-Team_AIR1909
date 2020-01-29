@@ -1,3 +1,12 @@
 package com.air.fumic.maodus.persic.poljak.database.entities
 
-data class Product(var id_product: Int, var name: String, var description: String)
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "discount")
+data class Product(
+    @PrimaryKey var id: Int,
+    @ColumnInfo(name = "name") var name: String,
+    @ColumnInfo(name = "description") var description: String
+)
