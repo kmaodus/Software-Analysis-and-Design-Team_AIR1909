@@ -1,6 +1,7 @@
 package com.air.fumic.maodus.persic.poljak.discountlocator
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,6 +13,7 @@ import com.air.fumic.maodus.persic.poljak.database.DAO
 import com.air.fumic.maodus.persic.poljak.database.MyDb
 import com.air.fumic.maodus.persic.poljak.discountlocator.loaders.DbDataLoader
 import com.example.core.DataLoader
+import com.example.map_view.MapsModule
 
 
 private val TAG = "MainActivity"
@@ -23,8 +25,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
+        //google maps proba
+        var intent = Intent(this, MapsModule:: class.java)
+        startActivity(intent)
+
+        /*
         val dataLoader : DataLoader = DbDataLoader()
 
         val database : DAO = MyDb()
@@ -45,6 +53,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-
+        */
     }
 }
