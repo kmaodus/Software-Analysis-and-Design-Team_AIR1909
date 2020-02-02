@@ -1,30 +1,42 @@
 package com.air.fumic.maodus.persic.poljak.discountlocator
 
+import android.R.*
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ListView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
+import androidx.core.widget.addTextChangedListener
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.row_main.view.*
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //val showButton = findViewById<Button>(R.id.btnShow)
         val listView = findViewById<ListView>(R.id.list_view_Stores)
-        listView.adapter = MyCustomAdapter()
+
+        btnShow.setOnClickListener() {
+            listView.adapter = MyCustomAdapter()
+        }
     }
 
-    class MyCustomAdapter() : BaseAdapter() {
+    class MyCustomAdapter : BaseAdapter() {
         //private val mContext: Context = context
-        private val storeNames = arrayListOf<String>("Varteks", "Super Nova")
+        private val storeNames = arrayListOf<String>("Varteks", "Super Nova", "Lidl")
+
+        public fun getStoreNames(): ArrayList<String> {
+            return storeNames
+        }
 
         override fun getView(position: Int, convertView: View?, viewGroup: ViewGroup): View {
             val rowMain: View
@@ -42,7 +54,8 @@ class MainActivity : AppCompatActivity() {
             }
             val viewHolder = rowMain.tag as ViewHolder
             viewHolder.nameTextView.text = storeNames.get(position)
-            viewHolder.positionTextView.text = "Row number: $position"
+            val rowPosition = position.inc()
+            viewHolder.positionTextView.text = "Row number: $rowPosition"
             return rowMain
         }
 

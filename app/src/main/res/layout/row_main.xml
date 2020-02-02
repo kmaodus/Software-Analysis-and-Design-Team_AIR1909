@@ -13,9 +13,11 @@
         android:layout_weight="1"
         android:paddingLeft="@dimen/padding"
         android:paddingTop="@dimen/padding"
-        android:text="Trgovina broj 1"
+        android:paddingRight="@dimen/padding"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Trgovina" />
 
     <TextView
@@ -24,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="@string/row_number"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stores_textview" />

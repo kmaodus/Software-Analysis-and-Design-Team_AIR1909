@@ -20,28 +20,15 @@
         android:textAlignment="center"
         android:textSize="40sp" />
 
-    <EditText
-        android:id="@+id/editStore"
-        style="@style/NameStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:ems="10"
-        android:hint="@string/whichStore"
-        android:inputType="textMultiLine|textPersonName"
-        android:textAlignment="center"
-        android:autofillHints=""
-        tools:targetApi="o" />
-
     <Button
-        android:id="@+id/btnSearch"
+        android:id="@+id/btnShow"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0"
         android:fontFamily="@font/roboto"
-        android:text="@string/search" />
+        android:text="@string/show" />
 
     <ListView
         android:id="@+id/list_view_Stores"
