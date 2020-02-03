@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DiscountLocator</string>
     <string name="storeName">List of stores</string>
+    <string name="showStores">Show available stores</string>
     <string name="whichStore">Search for a store</string>
     <string name="search">Search</string>
     <string name="show">Show</string>
