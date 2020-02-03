@@ -2,6 +2,11 @@ package com.example.map_view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.air.fumic.maodus.persic.poljak.webservice.MyWebservice
+import com.air.fumic.maodus.persic.poljak.webservice.MyWebserviceCaller
+import com.air.fumic.maodus.persic.poljak.webservice.responses.MyWebserviceResponse
+import com.example.core.DataClasses.Store
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
@@ -45,8 +50,23 @@ class MapsModule : AppCompatActivity(), OnMapReadyCallback{
         val angelus = LatLng(46.307349, 16.339824)
         mMap.addMarker(MarkerOptions().position(angelus).title("Angelus"))
 
+        setMarkers()
         mMap.moveCamera(CameraUpdateFactory.newLatLng(kapucinski))
         mMap.setMinZoomPreference(12.0f)
 
+    }
+
+    fun setMarkers(){
+        val webService = MyWebserviceCaller()
+        Log.i("stores", "ALL stores:")
+
+        var stores: Array<Store>? = webService.getStoresData()
+
+        if (stores != null){
+            for (store: Store in stores){
+                Log.i("stores", "Proba")
+                Log.i("stores", store.name)
+            }
+        }else Log.i("stores", "Stores is null!")
     }
 }

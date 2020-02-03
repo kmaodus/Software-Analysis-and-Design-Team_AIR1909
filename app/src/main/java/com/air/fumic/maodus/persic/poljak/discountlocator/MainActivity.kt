@@ -28,11 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        //google maps proba
-        var intent = Intent(this, MapsModule:: class.java)
-        startActivity(intent)
-
-        /*
         val dataLoader : DataLoader = DbDataLoader()
 
         val database : DAO = MyDb()
@@ -52,7 +47,12 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "Successful click")
             }
         })
+    }
 
-        */
+
+    fun setMapView(){
+        //google maps
+        var intent = Intent(this, MapsModule:: class.java)
+        startActivity(intent)
     }
 }
