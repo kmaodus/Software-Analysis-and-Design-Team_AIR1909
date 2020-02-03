@@ -18,4 +18,7 @@
     <string name="discount_name">Discount name</string>
     <string name="discount_desc">Discount description can be a very long text that will wrap into multiline automatically</string>
     <string name="discount_value">20%</string>
+
+    <string name="admob_app_id">ca-app-pub-1953989624902260~4998986487</string>
+    <string name="admob_banner_ad">ca-app-pub-1953989624902260/2564109421</string>
 </resources>
