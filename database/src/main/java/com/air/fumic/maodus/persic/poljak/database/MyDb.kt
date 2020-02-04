@@ -12,6 +12,10 @@ class MyDb{
     //connection to database
     val database = FirebaseDatabase.getInstance().reference
 
+    public fun getInstance() : MyDb {
+        return this
+    }
+
     //INSERT functions
 
     fun insertStore(store: Store){

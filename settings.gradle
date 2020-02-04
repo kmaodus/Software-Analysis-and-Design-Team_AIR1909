@@ -1,2 +1,2 @@
-include ':app', ':database', ':core'
+include ':app', ':database', ':core', ':webservice', ':map_view'
 rootProject.name='DiscountLocator'
