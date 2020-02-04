@@ -1,27 +1,27 @@
 package com.air.fumic.maodus.persic.poljak.discountlocator.loaders
 
+import com.air.fumic.maodus.persic.poljak.database.MyDatabase
 import com.example.core.DataLoadedListener
 import com.example.core.DataLoader
-import com.air.fumic.maodus.persic.poljak.database.MyDb
+import com.air.fumic.maodus.persic.poljak.database.entities.Discount
+import com.air.fumic.maodus.persic.poljak.database.entities.Store
+import com.air.fumic.maodus.persic.poljak.discountlocator.MainActivity
 
 class DbDataLoader: DataLoader {
-    var data_loaded = false
+    private var dataLoaded:Boolean = false
 
     override fun loadData(listener: DataLoadedListener) {
-        var dao = MyDb()
+        val database = MyDatabase(MainActivity.context)
+        var dao = database.getDAO()
 
-        var users = dao.selectUsers()
-        var stores = dao.selectStore()
-        var products = dao.selectProduct()
-        var offers = dao.selectOffer()
-        var discounts = dao.selectDiscount()
-        var charts = dao.selectChart()
-        data_loaded = true
+        var stores: List<Store> = dao.getStores()
+        var discounts: List<Discount> = dao.getDiscounts()
 
-        listener.onDataLoaded(users, stores, products, discounts, offers, charts)
+        dataLoaded = true
+        listener.onDataLoaded(stores = stores, discounts = discounts)
     }
 
     override fun isDataLoaded(): Boolean {
-        return data_loaded
+        return dataLoaded
     }
 }

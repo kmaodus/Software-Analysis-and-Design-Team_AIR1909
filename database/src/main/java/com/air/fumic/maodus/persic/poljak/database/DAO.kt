@@ -4,7 +4,7 @@ import androidx.room.*
 import com.air.fumic.maodus.persic.poljak.database.entities.*
 
 @Dao
-interface DAO {
+interface  DAO {
 
     @Query("SELECT * FROM store")
     fun getStores(): List<Store>
