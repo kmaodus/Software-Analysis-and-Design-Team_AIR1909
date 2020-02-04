@@ -13,37 +13,47 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MyWebserviceCaller {
 
-    val retrofit = Retrofit.Builder()
-        .baseUrl(BaseUrl)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
 
-    fun getStoresData(): Array<Store>?{
+
+    public fun getStoresData(){
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BaseUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
         val service = retrofit.create(MyWebservice::class.java)
         val call = service.getStores(Method)
 
-        var allStores: Array<Store>? = null
+        //var allStores: Array<Store>? = null
 
         call.enqueue(object: Callback<MyWebserviceResponse>{
             override fun onResponse(
                 call: Call<MyWebserviceResponse>?,
                 response: Response<MyWebserviceResponse>
             ) {
-                allStores = processStoresResponse(response)
+                if(response.code() == 200){
+                    val jsonStores = response.body()
+                    //allStores = processStoresResponse(response)
+                }
             }
 
             override fun onFailure(call: Call<MyWebserviceResponse>?, t: Throwable?) {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
         })
-        return allStores
+        //return allStores
     }
 
-    fun getDiscountsData(): Array<Discount>?{
+    public fun getDiscountsData(): Array<Discount>{
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BaseUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
         val service = retrofit.create(MyWebservice::class.java)
         val call = service.getDiscounts(Method)
 
-        var allDiscounts: Array<Discount>? = null
+        lateinit var allDiscounts: Array<Discount>
 
         call.enqueue(object: Callback<MyWebserviceResponse>{
             override fun onResponse(
