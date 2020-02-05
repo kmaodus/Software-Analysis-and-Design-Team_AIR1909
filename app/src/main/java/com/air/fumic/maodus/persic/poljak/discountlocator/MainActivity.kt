@@ -1,52 +1,49 @@
 package com.air.fumic.maodus.persic.poljak.discountlocator
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.iid.FirebaseInstanceId
-import com.google.firebase.messaging.FirebaseMessaging
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    lateinit var toolbar: Toolbar
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var navView: NavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        notificationSetup()
-        MobileAds.initialize(this, getString(R.string.admob_app_id))
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(this.toolbar)
 
-        //val showButton = findViewById<Button>(R.id.btnShow)
-        //val listView = findViewById<ListView>(R.id.list_view_Stores)
-        //listView.adapter = MyCustomAdapter()
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navView = findViewById(R.id.nav_view)
 
-        /*btnShow.setOnClickListener() {
-            listView.adapter = MyCustomAdapter()
-        }*/
+        val toogle = ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0)
+
+        drawerLayout.addDrawerListener(toogle)
+        toogle.syncState()
+        navView.setNavigationItemSelectedListener(this)
     }
 
-    fun showListView(view: View) {
-        val intent = Intent(this, DisplayListActivity::class.java).also {
-            startActivity(it)
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_message -> {
+                Toast.makeText(this, "Messages clicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_share -> {
+                Toast.makeText(this, "Share something", Toast.LENGTH_SHORT).show()
+            }
         }
+        drawerLayout.closeDrawer(GravityCompat.START)
+        super.onBackPressed()
+        return true
     }
-
-    fun notificationSetup() {
-        FirebaseMessaging.getInstance().isAutoInitEnabled = true
-        FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    return@OnCompleteListener
-                }
-                val token = task.result?.token
-                //Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
-            })
-    }
-
-
 }

@@ -21,4 +21,9 @@
 
     <string name="admob_app_id">ca-app-pub-1953989624902260~4998986487</string>
     <string name="admob_banner_ad">ca-app-pub-1953989624902260/2564109421</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_header_title">Discount Locator - Kotlin</string>
+    <string name="nav_header_info">foi@foi.hr</string>
 </resources>
