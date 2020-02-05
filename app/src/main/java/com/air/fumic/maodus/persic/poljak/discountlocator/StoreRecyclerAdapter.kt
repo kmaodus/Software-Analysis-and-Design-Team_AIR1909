@@ -55,7 +55,7 @@ class StoreRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(store.imageUrl)
+                .load(store.imgUrl)
                 .into(storeImage)
         }
     }
