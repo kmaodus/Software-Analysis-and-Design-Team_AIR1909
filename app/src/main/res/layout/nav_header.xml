@@ -21,6 +21,7 @@
         android:paddingTop="@dimen/padding"
         android:paddingBottom="@dimen/padding"
         android:text="@string/nav_header_title"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <androidx.appcompat.widget.AppCompatTextView

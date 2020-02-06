@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/user_header">
+
+        <EditTextPreference
+            app:key="username"
+            app:title="@string/username_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/app_header">
+
+        <ListPreference
+            app:defaultValue="system"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="language"
+            app:title="@string/language_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="webservice"
+            android:disableDependentsState="true"
+            app:title="@string/webservice_title" />
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:dependency="webservice"
+            app:title="@string/sync_title"
+            app:summary="@string/sync_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

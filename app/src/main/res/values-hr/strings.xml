@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DiscountLocator</string>
+
+    <string name="store_image">Slika trgovine</string>
+    <string name="store_name">Naziv trgovine</string>
+    <string name="store_desc">Opis ili promotivni tekst neke trgovine koji može biti višelinijski</string>
+
+    <string name="discount_name">Naziv popusta</string>
+    <string name="discount_desc">Opis popusta treba biti dizajniran tako da može biti dugačak te da se pogled automatski proširuje/povisuje ovisno o dužini teksta</string>
+    <string name="discount_value">20%</string>
+    <string name="preferences">Postavke</string>
+    <string name="title_activity_settings">Postavke</string>
+
+    <!-- Preference Titles -->
+    <string name="user_header">Korisničke postavke</string>
+    <string name="app_header">Aplikacijske postavke</string>
+
+    <!-- Users Preferences -->
+    <string name="username_title">Korisničko ime</string>
+
+    <!-- Apps Preferences -->
+    <string name="sync_title">Sinkroniziraj podatke pri pokretanju aplikacije</string>
+    <string name="sync_summary">Ako je uključena ova opcija, podaci u lokalnoj bazi će se automatski sinkronizirati s podacima na web servisu pri pokretanju aplikacije.</string>
+    <string name="language_title">Izaberi jezik</string>
+    <string name="webservice_title">Automatski koristi podatke s web servisa</string>
+
+    <!-- Navigation drawer -->
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+
+    <string name="nav_header_title">Discount Locator</string>
+    <string name="nav_header_info">foi@foi.hr</string>
+
+    <string name="menu_about">O aplikaciji</string>
+    <string name="additional">Dodatno</string>
+
+    <string name="list_view">Prikaz u listi</string>
+
+    <string name="about">O aplikaciji</string>
+    <string name="settings">Postavke</string>
+    <string name="about_app">O aplikaciji</string>
+    <string name="map_view">Prikaz karte</string>
+    <string name="hello_blank_fragment">Prazan fragment - test</string>
+
+    <string name="storeName">Lista trgovina</string>
+    <string name="showStores">Prikaži dostupne trgovine</string>
+    <string name="whichStore">Traži trgovinu</string>
+    <string name="search">Traži</string>
+    <string name="show">Prikaži</string>
+    <string name="row_number">Redni broj:</string>
+
+    <string name="creators">Članovi: Alen Peršić, Kristijan Maoduš, Patrik Fumić, Valentino Poljak</string>
+    <string name="example_of_app">Primjer Kotlin aplikacije - Tim1909</string>
+</resources>

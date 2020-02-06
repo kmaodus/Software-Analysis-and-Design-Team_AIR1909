@@ -1,0 +1,14 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="language_entries">
+        <item>Systems default</item>
+        <item>English</item>
+        <item>Croatian</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>system</item>
+        <item>en</item>
+        <item>hr</item>
+    </string-array>
+</resources>

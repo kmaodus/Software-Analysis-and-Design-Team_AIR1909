@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">DiscountLocator</string>
+
     <string name="storeName">List of stores</string>
     <string name="showStores">Show available stores</string>
     <string name="whichStore">Search for a store</string>
     <string name="search">Search</string>
     <string name="show">Show</string>
     <string name="row_number">Row number:</string>
-    <string name="dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="dummy" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
@@ -19,11 +20,44 @@
     <string name="discount_desc">Discount description can be a very long text that will wrap into multiline automatically</string>
     <string name="discount_value">20%</string>
 
-    <string name="admob_app_id">ca-app-pub-1953989624902260~4998986487</string>
-    <string name="admob_banner_ad">ca-app-pub-1953989624902260/2564109421</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-1953989624902260~4998986487</string>
+    <string name="admob_banner_ad" translatable="false">ca-app-pub-1953989624902260/2564109421</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="nav_header_title">Discount Locator - Kotlin</string>
     <string name="nav_header_info">foi@foi.hr</string>
+
+    <string name="about_app">About app</string>
+    <string name="map_view">Map view</string>
+    <string name="list_view">List view</string>
+    <string name="additional">Additional</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="user_header">User settings</string>
+    <string name="app_header">Application settings</string>
+
+    <!-- Users Preferences -->
+    <string name="username_title">Username</string>
+
+    <!-- Apps Preferences -->
+    <string name="sync_title">Sync data on app startup</string>
+    <string name="sync_summary">If enabled the data in local database will be synced with webservice data on app startup</string>
+    <string name="language_title">Choose language</string>
+    <string name="webservice_title">Load data from webservice by default</string>
+
+    <string name="preferences">Preferences</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <!-- Navigation drawer -->
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+
+
+    <string name="menu_about">About app</string>
+    <string name="creators">Made by: Alen Peršić, Kristijan Maoduš, Patrik Fumić, Valentino Poljak</string>
+    <string name="example_of_app">Example of a Kotlin app - Tim1909</string>
 </resources>
