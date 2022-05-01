@@ -4,6 +4,8 @@ The theme of this project is an Android application for locating discounts, call
 
 Forked from [Discount Locator](https://github.com/AIR-FOI-HR/AIR1909).
 
+Part of course [Software Analysis and Design](https://www.foi.unizg.hr/sites/default/files/software_analysis_and_design.pdf) at [FOI](https://www.foi.unizg.hr/en).
+
 
 ## Built With
 
